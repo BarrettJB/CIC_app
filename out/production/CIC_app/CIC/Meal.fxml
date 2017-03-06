@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CIC.Meal_Controller">
+   <children>
+      <BorderPane prefHeight="768.0" prefWidth="1024.0">
+         <top>
+            <AnchorPane prefHeight="150.0" prefWidth="1024.0" style="-fx-background-color: #71B1C8;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="38.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0" />
+                  <Label fx:id="text_name" layoutX="266.0" layoutY="67.0" text="Name" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="25.0">
+                     <font>
+                        <Font name="Segoe UI Bold" size="62.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="763.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0" />
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="518.0" prefWidth="150.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <AnchorPane prefHeight="518.0" prefWidth="724.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="36.0" layoutY="75.0" text="Remaining Meals:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="75.0">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="text_meals" layoutX="239.0" layoutY="76.0" text="[number]" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="75.0">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="134.0" text="Bonus Bucks:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="150.0">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="text_bonus" layoutX="244.0" layoutY="137.0" text="[number]" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="150.0">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="33.0" layoutY="176.0" text="Miscellaneous Account:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="225.0">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="text_misc" layoutX="250.0" layoutY="180.0" text="[balance]" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="225.0">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+         </center>
+         <right>
+            <AnchorPane prefHeight="518.0" prefWidth="150.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <AnchorPane prefHeight="100.0" prefWidth="1024.0" style="-fx-background-color: #71B1C8;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btn_home_Meal" mnemonicParsing="false" onMousePressed="#homePress" onMouseReleased="#homeRelease" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 6px;" text="Home" textFill="#97252b" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font name="Segoe UI Bold" size="30.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
