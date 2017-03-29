@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -7,13 +8,37 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CIC.Lost_Controller">
    <top>
-      <AnchorPane prefHeight="150.0" prefWidth="1024.0" style="-fx-background-color: #71B1C8;" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="150.0" prefWidth="1024.0" style="-fx-background-color: #71B1C8;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="178.0" layoutY="75.0" text="Lost ID" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="62.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
    </top>
    <left>
       <AnchorPane prefHeight="518.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER" />
    </left>
    <center>
-      <AnchorPane prefHeight="518.0" prefWidth="824.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="518.0" prefWidth="824.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="text_inst1" layoutX="29.0" layoutY="45.0" text="Instructions1">
+               <font>
+                  <Font name="Segoe UI" size="26.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_report" layoutX="262.0" layoutY="222.0" mnemonicParsing="false" onMousePressed="#reportPress" onMouseReleased="#reportRelease" style="-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 4px;" text="Report Lost ID" textFill="#97252b">
+               <font>
+                  <Font name="Segoe UI Bold" size="36.0" />
+               </font>
+            </Button>
+            <Label fx:id="text_inst2" layoutX="29.0" layoutY="311.0" text="Instructions2">
+               <font>
+                  <Font name="Segoe UI" size="26.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
    </center>
    <right>
       <AnchorPane prefHeight="518.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER" />

@@ -3,6 +3,7 @@ package CIC;
 /**
  * Created by bb36 on 2/27/2017.
  */
+//probably can be deleted?
 public class Login {
     private String name;
     private int meals=0;
@@ -10,8 +11,7 @@ public class Login {
     private float bonus=0;
 
     String getName(){
-        //name = (String)PIN_Controller.students.get(PIN_Controller.pin_saved);
-        name = (String)PIN_Controller.students.get("1234");
+        name = (String)PIN_Controller.students.get(PIN_Controller.pin_saved);
         return name;
     }
     int getMeals(){

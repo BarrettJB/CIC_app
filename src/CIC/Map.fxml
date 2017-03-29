@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -7,7 +9,14 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CIC.Map_Controller">
    <top>
-      <AnchorPane prefHeight="150.0" prefWidth="1024.0" style="-fx-background-color: #71B1C8;" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="150.0" prefWidth="1024.0" style="-fx-background-color: #71B1C8;" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Campus Map" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="62.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
    </top>
    <left>
       <AnchorPane prefHeight="518.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER" />
@@ -23,14 +32,58 @@
                   <Font name="Segoe UI Bold" size="30.0" />
                </font>
             </Button>
+            <Button fx:id="btn_map_full" mnemonicParsing="false" onMousePressed="#mapbtnPress" onMouseReleased="#mapbtnRelease" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 6px;" text="Full Map" textFill="#97252b" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="30.0" />
+               </font>
+            </Button>
+            <Slider majorTickUnit="0.5" max="2.5" min="0.5" minorTickCount="0" prefHeight="70.0" prefWidth="300.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="362.0" />
          </children></AnchorPane>
    </bottom>
    <center>
-      <TabPane fx:id="tabEdit" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
-        <tabs>
-          <Tab text="Untitled Tab 1" />
-          <Tab text="Untitled Tab 2" />
-        </tabs>
-      </TabPane>
+      <AnchorPane prefHeight="518.0" prefWidth="824.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="824.0" spacing="1.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Button fx:id="btn_map_academic" mnemonicParsing="false" onMousePressed="#mapbtnPress" onMouseReleased="#mapbtnRelease" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 4px;" text="Academic Buildings" textFill="#97252b">
+                           <font>
+                              <Font name="Segoe UI Bold" size="21.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_map_residence" mnemonicParsing="false" onMousePressed="#mapbtnPress" onMouseReleased="#mapbtnRelease" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 4px;" text="Residence Halls" textFill="#97252b">
+                           <font>
+                              <Font name="Segoe UI Bold" size="21.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_map_apartments" mnemonicParsing="false" onMousePressed="#mapbtnPress" onMouseReleased="#mapbtnRelease" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 4px;" text="KE Apartments" textFill="#97252b">
+                           <font>
+                              <Font name="Segoe UI Bold" size="21.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_map_athletics" mnemonicParsing="false" onMousePressed="#mapbtnPress" onMouseReleased="#mapbtnRelease" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 4px;" text="Athletics" textFill="#97252b">
+                           <font>
+                              <Font name="Segoe UI Bold" size="21.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <ScrollPane prefHeight="468.0" prefWidth="200.0" style="-fx-border-color: #000000; -fx-border-width: 4px;">
+                     <content>
+                        <ImageView fx:id="mapImage" fitHeight="636.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true" scaleX="1.5" scaleY="1.5" translateX="60.0" translateY="-130.0">
+                           <image>
+                              <Image url="@CalvinMapFull.jpg" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
    </center>
 </BorderPane>

@@ -1,18 +1,23 @@
 package CIC;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class Main extends Application {
+    //initialize stage and scenes
     static Stage stg_Main;
     static Scene scn_PIN, scn_Home, scn_Meal, scn_Map, scn_Lost;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
         stg_Main = primaryStage;
+
+        //create all scenes with correct visuals
         Parent par_PIN = FXMLLoader.load(getClass().getResource("PIN.fxml"));
         scn_PIN = new Scene(par_PIN, 1024, 768);
         Parent par_Home = FXMLLoader.load(getClass().getResource("Home.fxml"));
@@ -23,11 +28,14 @@ public class Main extends Application {
         scn_Map = new Scene(par_Map, 1024,768);
         Parent par_Lost = FXMLLoader.load(getClass().getResource("Lost.fxml"));
         scn_Lost = new Scene(par_Lost, 1024, 768);
+
+        //show the Home screen first
         stg_Main.setTitle("CIC Application");
         stg_Main.setScene(scn_Home);
         stg_Main.show();
     }
 
+    //functions used to move between scenes
     public static void goto_scn_home() {
         stg_Main.setScene(scn_Home);
     }
