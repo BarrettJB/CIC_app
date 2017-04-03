@@ -16,13 +16,13 @@ import java.util.ResourceBundle;
 /**
  * Created by bb36 on 2/13/2017.
  */
-public class Map_Controller{
+public class Map_Controller implements Initializable{
     @FXML
     private Button btn_home_Map, btn_map_academic, btn_map_residence, btn_map_apartments, btn_map_athletics,btn_map_full;
     @FXML
     private ImageView mapImage;
     @FXML
-            private Image test;
+    private Image test;
     String mymap;
 
     //"Home" button pressed
@@ -63,7 +63,7 @@ public class Map_Controller{
         mymap = src.getText();
         if (mymap.equals("Academic Buildings")) {
             //change image
-            mapImage.setStyle("-fx-image: smiley_test.jpeg");
+            test = new Image(getClass().getResource("images/smiley_test.jpeg").toString());
             //change position
         } else if (mymap.equals("Residence Halls")) {
             //change image
@@ -76,11 +76,15 @@ public class Map_Controller{
             //change position
         } else {
             //full image
-            test = new Image("@CalvinMapFull.jpg");
-            mapImage.setImage(test);
-            //full position
+            test = new Image(getClass().getResource("images/CalvinMapFull.jpg").toString());            //full position
         }
+        mapImage.setImage(test);
+    }
 
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        test = new Image(getClass().getResource("images/CalvinMapFull.jpg").toString());
+        mapImage.setImage(test);
     }
 
 }

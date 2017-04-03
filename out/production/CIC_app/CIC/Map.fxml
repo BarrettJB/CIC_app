@@ -32,7 +32,7 @@
                   <Font name="Segoe UI Bold" size="30.0" />
                </font>
             </Button>
-            <Button fx:id="btn_map_full" mnemonicParsing="false" onMousePressed="#mapbtnPress" onMouseReleased="#mapbtnRelease" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 6px;" text="Full Map" textFill="#97252b" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="15.0">
+            <Button fx:id="btn_map_full" mnemonicParsing="false" onMousePressed="#mapbtnPress" onMouseReleased="#mapbtnRelease" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 6px; -fx-background-insets: 0;" text="Full Map" textFill="#97252b" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="15.0">
                <font>
                   <Font name="Segoe UI Bold" size="30.0" />
                </font>
@@ -47,22 +47,22 @@
                <children>
                   <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="824.0" spacing="1.0" style="-fx-background-color: #ffffff;">
                      <children>
-                        <Button fx:id="btn_map_academic" mnemonicParsing="false" onMousePressed="#mapbtnPress" onMouseReleased="#mapbtnRelease" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 4px;" text="Academic Buildings" textFill="#97252b">
+                        <Button fx:id="btn_map_academic" mnemonicParsing="false" onMousePressed="#mapbtnPress" onMouseReleased="#mapbtnRelease" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 4px; -fx-background-insets: 0;" text="Academic Buildings" textFill="#97252b">
                            <font>
                               <Font name="Segoe UI Bold" size="21.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btn_map_residence" mnemonicParsing="false" onMousePressed="#mapbtnPress" onMouseReleased="#mapbtnRelease" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 4px;" text="Residence Halls" textFill="#97252b">
+                        <Button fx:id="btn_map_residence" mnemonicParsing="false" onMousePressed="#mapbtnPress" onMouseReleased="#mapbtnRelease" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 4px; -fx-background-insets: 0;" text="Residence Halls" textFill="#97252b">
                            <font>
                               <Font name="Segoe UI Bold" size="21.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btn_map_apartments" mnemonicParsing="false" onMousePressed="#mapbtnPress" onMouseReleased="#mapbtnRelease" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 4px;" text="KE Apartments" textFill="#97252b">
+                        <Button fx:id="btn_map_apartments" mnemonicParsing="false" onMousePressed="#mapbtnPress" onMouseReleased="#mapbtnRelease" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 4px; -fx-background-insets: 0;" text="KE Apartments" textFill="#97252b">
                            <font>
                               <Font name="Segoe UI Bold" size="21.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btn_map_athletics" mnemonicParsing="false" onMousePressed="#mapbtnPress" onMouseReleased="#mapbtnRelease" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 4px;" text="Athletics" textFill="#97252b">
+                        <Button fx:id="btn_map_athletics" mnemonicParsing="false" onMousePressed="#mapbtnPress" onMouseReleased="#mapbtnRelease" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 4px; -fx-background-insets: 0;" text="Athletics" textFill="#97252b">
                            <font>
                               <Font name="Segoe UI Bold" size="21.0" />
                            </font>
@@ -71,13 +71,13 @@
                   </HBox>
                   <ScrollPane prefHeight="468.0" prefWidth="200.0" style="-fx-border-color: #000000; -fx-border-width: 4px;">
                      <content>
-                        <ImageView fx:id="mapImage" fitHeight="636.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true" scaleX="1.5" scaleY="1.5" translateX="60.0" translateY="-130.0">
-                           <image>
-                              <Image url="@CalvinMapFull.jpg" />
-                           </image>
+                        <ImageView fx:id="mapImage" fitHeight="636.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
                            <viewport>
                               <Rectangle2D />
                            </viewport>
+                           <image>
+                              <Image url="@images/CalvinMapFull.jpg" />
+                           </image>
                         </ImageView>
                      </content>
                   </ScrollPane>

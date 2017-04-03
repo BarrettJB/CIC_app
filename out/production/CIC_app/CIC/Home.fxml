@@ -49,7 +49,7 @@
             </Button>
             <ImageView fitHeight="418.0" fitWidth="450.0" layoutX="597.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
                <image>
-                  <Image url="@CalvinLogo.jpg" />
+                  <Image url="@images/CalvinLogo.jpg" />
                </image>
             </ImageView>
          </children></AnchorPane>
