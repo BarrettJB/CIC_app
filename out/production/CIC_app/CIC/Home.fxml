@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -36,22 +37,27 @@
    <center>
       <AnchorPane prefHeight="518.0" prefWidth="824.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btn_pin_home" layoutX="506.0" layoutY="205.0" mnemonicParsing="false" onMousePressed="#pinPress" onMouseReleased="#pinRelease" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 6px; -fx-background-insets: 0;" text="Log In" textFill="#97252b" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="200.0">
+            <Button fx:id="btn_pin_home" alignment="CENTER" layoutX="506.0" layoutY="205.0" mnemonicParsing="false" onMousePressed="#pinPress" onMouseReleased="#pinRelease" prefHeight="200.0" prefWidth="450.0" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 6px; -fx-background-insets: 0;" text="Swipe Student ID Card to Log In" textAlignment="CENTER" textFill="#97252b" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0">
                <font>
                   <Font name="Segoe UI Bold" size="44.0" />
                </font>
             </Button>
-            <Button fx:id="btn_map_home" layoutX="78.0" layoutY="203.0" mnemonicParsing="false" onMousePressed="#mapPress" onMouseReleased="#mapRelease" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 6px; -fx-background-insets: 0;" text="Campus Map" textFill="#97252b" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="200.0">
+            <Button fx:id="btn_map_home" layoutX="78.0" layoutY="203.0" mnemonicParsing="false" onMousePressed="#mapPress" onMouseReleased="#mapRelease" prefHeight="200.0" prefWidth="450.0" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 6px; -fx-background-insets: 0;" text="Campus Map" textFill="#97252b" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0">
                <font>
                   <Font name="Segoe UI Bold" size="44.0" />
                </font>
             </Button>
+            <ImageView fitHeight="418.0" fitWidth="450.0" layoutX="597.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+               <image>
+                  <Image url="@CalvinLogo.jpg" />
+               </image>
+            </ImageView>
          </children></AnchorPane>
    </center>
    <left>
-      <AnchorPane prefHeight="518.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="518.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
    </left>
    <right>
-      <AnchorPane prefHeight="518.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="518.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
    </right>
 </BorderPane>

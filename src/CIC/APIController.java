@@ -41,6 +41,8 @@ public class APIController implements Initializable{
         else {
             System.err.println("Connection is currently down");
         }
+        System.out.println("Testing GET /test/user/1403378");
+        getUser("1403378", true);
 
     }
 
@@ -94,6 +96,48 @@ public class APIController implements Initializable{
         }
 
         return true;
+    }
+
+    public static String getUser(String userID, boolean verbose){
+        /*
+        testConnection method will generate HTTP GET request to test the given API server
+        @param1: String hostname, the hostname of the web server. E.g. `localhost`, `153.116.110.42`, etc.
+        @param2: int portNum, the port on which the HTTP server is listening
+        @param3: String filePath, the path to test. For kiosk, the path is /test
+        @param4: boolean verbose, if enabled, will have print statements to track test process
+         */
+        String filepath = "/test/user/" + userID;
+        String msg = "";
+        try{
+            if (verbose){
+                System.out.format("Sending a message to http://%s:%d%s \n", API_SERVER_NAME, API_SERVER_PORT, filepath);
+            }
+            URL u = new URL("http", API_SERVER_NAME, API_SERVER_PORT, filepath);
+            // read the message contents
+            // yes, this is TOTAL BS that Java connection objects don't have better reading methods
+            BufferedReader br = new BufferedReader(new InputStreamReader(u.openStream()));
+            String strTemp;
+            while (null != (strTemp = br.readLine())) {
+                msg += strTemp + '\n';
+                if (verbose) {
+                    System.out.println(strTemp);
+                }
+            }
+        }
+        catch (ConnectException c){
+            // Error generated if a connection to the API server cannot be made
+            if (verbose) {
+                System.err.println("The connection was refused by the server");
+            }
+            return "error";
+        }
+        catch (Exception e){
+            // Other exceptions, e.g. IOException
+            System.err.print("Exception encountered:\n" + e.getLocalizedMessage());
+            return "error";
+        }
+
+        return msg;
     }
 
     @Override

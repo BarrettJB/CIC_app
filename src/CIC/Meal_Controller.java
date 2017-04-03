@@ -14,15 +14,21 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import jdk.nashorn.internal.parser.JSONParser;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 /**
  * Created by bb36 on 2/13/2017.
  */
 public class Meal_Controller {
     @FXML
-    public Label text_meals, text_bonus, text_misc, text_name;
+    public Label text_meals, text_bonus, text_name, text_uid, text_update;
     @FXML
     private Button btn_home_Meal;
     String user_info;
+    String str_meals, str_bonus, str_name, str_update, str_maxmeals, str_weekly, str_uid, str_name_temp;
+    String[] array_name;
 
     //"Home" button pressed
     @FXML
@@ -47,12 +53,37 @@ public class Meal_Controller {
 
     //gets info about who just logged in and displays appropriately
     public void setLabelTexts() {
-        user_info = (String)PIN_Controller.students.get(PIN_Controller.pin_saved);
-        String[] parts = user_info.split(",");
-        text_name.setText(parts[0]);
-        text_meals.setText(parts[1]);
-        text_bonus.setText(parts[2]);
-        text_misc.setText(parts[3]);
+        user_info = APIController.getUser(PIN_Controller.pin_saved, true);
+        try {
+            JSONObject info = new JSONObject(user_info);
+            str_uid = info.getString("uID");
+            str_name_temp = info.getString("name");
+            Double num_bonus = info.getDouble("bonusBucks");
+            str_bonus = num_bonus.toString();
+            str_update = info.getString("updated");
+            JSONObject meals = info.getJSONObject("mealPlan");
+            Integer num_meals = meals.getInt("count");
+            str_meals = num_meals.toString();
+            Boolean weekly = meals.getBoolean("isWeekly");
+            if (weekly) {
+                str_weekly = "this week";
+            } else {
+                str_weekly = "this semester";
+            }
+            Integer max_meals = meals.getInt("maxMeals");
+            str_maxmeals = max_meals.toString();
+
+
+        } catch (Exception ex) {
+            System.out.println("test");
+        }
+        array_name = str_name_temp.split(", ");
+        str_name = array_name[1]+" "+array_name[0];
+        text_name.setText(str_name);
+        text_uid.setText(str_uid);
+        text_bonus.setText(str_bonus);
+        text_meals.setText(str_meals+" of "+str_maxmeals+" left "+str_weekly);
+        text_update.setText(str_update);
     }
 
 }

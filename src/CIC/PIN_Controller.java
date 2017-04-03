@@ -116,7 +116,8 @@ public class PIN_Controller implements Initializable {
         btn_enter.setTextFill(Color.rgb(113,177,200));
         btn_enter.setStyle("-fx-background-color: #ffffff; -fx-border-color: #71b1c8; -fx-border-width: 4px");
         //check that PIN is valid
-        if (students.containsKey(pin_entered)){
+        if(true) {
+        //if (students.containsKey(pin_entered)){
             // PIN is good
             //reset instruction text
             text_output.setText("Correct PIN");
@@ -175,10 +176,10 @@ public class PIN_Controller implements Initializable {
         text_output.setText("");
         instructions.setText("Enter your PIN");
         //replace with info from server
-        students = new Hashtable();
-        students.put("1234","Emily Floch, 13, 21, $75.00");
-        students.put("5678","Barrett Bryson, 20, 0, $5.00");
-        students.put("2468","Landon Sterk, 5, 60, $0.00");
+//        students = new Hashtable();
+//        students.put("1234","Emily Floch, 13, 21, $75.00");
+//        students.put("5678","Barrett Bryson, 20, 0, $5.00");
+//        students.put("2468","Landon Sterk, 5, 60, $0.00");
 
     }
 

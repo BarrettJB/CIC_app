@@ -13,12 +13,17 @@
             <AnchorPane prefHeight="150.0" prefWidth="1024.0" style="-fx-background-color: #71B1C8;" BorderPane.alignment="CENTER">
                <children>
                   <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="38.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0" />
-                  <Label fx:id="text_name" layoutX="266.0" layoutY="67.0" text="Name" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="25.0">
+                  <Label fx:id="text_name" alignment="BOTTOM_LEFT" layoutX="266.0" layoutY="67.0" prefHeight="76.0" prefWidth="739.0" text="Name" textFill="WHITE" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="25.0">
                      <font>
                         <Font name="Segoe UI Bold" size="62.0" />
                      </font>
                   </Label>
                   <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="763.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0" />
+                  <Label fx:id="text_uid" layoutX="155.0" layoutY="104.0" text="uID" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="29.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
          </top>
@@ -48,12 +53,12 @@
                         <Font name="Segoe UI" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="33.0" layoutY="176.0" text="Miscellaneous Account:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="225.0">
+                  <Label layoutX="39.0" layoutY="232.0" text="Last Updated:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="225.0">
                      <font>
                         <Font name="Segoe UI" size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="text_misc" layoutX="250.0" layoutY="180.0" text="[balance]" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="225.0">
+                  <Label fx:id="text_update" layoutX="278.0" layoutY="214.0" text="[date]" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="225.0">
                      <font>
                         <Font name="Segoe UI" size="18.0" />
                      </font>
@@ -66,7 +71,7 @@
          <bottom>
             <AnchorPane prefHeight="100.0" prefWidth="1024.0" style="-fx-background-color: #71B1C8;" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="btn_home_Meal" mnemonicParsing="false" onMousePressed="#homePress" onMouseReleased="#homeRelease" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 6px;" text="Home" textFill="#97252b" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="15.0">
+                  <Button fx:id="btn_home_Meal" mnemonicParsing="false" onMousePressed="#homePress" onMouseReleased="#homeRelease" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 6px; -fx-background-insets: 0;" text="Home" textFill="#97252b" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="15.0">
                      <font>
                         <Font name="Segoe UI Bold" size="30.0" />
                      </font>

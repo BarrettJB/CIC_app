@@ -53,7 +53,7 @@ public class Map_Controller{
     }
     //Map buttons released
     @FXML
-    private void mapbtnRelease(MouseEvent me) {
+    public void mapbtnRelease(MouseEvent me) {
         //get button
         Button src = (Button) me.getSource();
         //change appearance of button
@@ -63,8 +63,7 @@ public class Map_Controller{
         mymap = src.getText();
         if (mymap.equals("Academic Buildings")) {
             //change image
-            test = new Image("/smiley_test.jpeg", true);
-            mapImage.setImage(test);
+            mapImage.setStyle("-fx-image: smiley_test.jpeg");
             //change position
         } else if (mymap.equals("Residence Halls")) {
             //change image
@@ -77,6 +76,8 @@ public class Map_Controller{
             //change position
         } else {
             //full image
+            test = new Image("@CalvinMapFull.jpg");
+            mapImage.setImage(test);
             //full position
         }
 
