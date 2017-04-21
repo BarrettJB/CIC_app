@@ -123,7 +123,9 @@ public class PIN_Controller implements Initializable {
             text_output.setText("Correct PIN");
             instructions.setText("Enter your PIN");
 
-            pin_saved = pin_entered;
+            //pin_saved = pin_entered;
+            CardReader.init();
+            pin_saved = CardReader.getLastID();
             System.out.format("pin_entered is (%s)", pin_saved);
             //reset scene to Meal
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Meal.fxml"));

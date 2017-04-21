@@ -57,13 +57,14 @@ public class Lost_Controller implements Initializable {
         btn_report.setStyle("-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px;");
         //send email to ID owner
         //display instructions 2
-        text_inst2.setText("further instructions");
+        text_inst2.setText("An email has been sent to the owner of the ID card. Please give the card to an employee in Johnny's for safekeeping.");
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         //set instructions
-        text_inst1.setText("Explain purpose of screen");
+        text_inst1.setText("If you have found a Student ID card, please swipe the card and press 'Report Lost ID'. An email will be sent to the owner of the ID card." +
+                " If you have received an email about a lost Student ID card, please see a Johnny's employee or Campus Safety to have it returned to you.");
         text_inst2.setText("");
     }
 
