@@ -44,7 +44,7 @@ public class Meal_Controller {
         btn_home_Meal.setTextFill(Color.rgb(151,37,43));
         btn_home_Meal.setStyle("-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px;");
         //reset scene to PIN
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("PIN.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
         Parent root = loader.load();
         btn_home_Meal.getScene().setRoot(root);
         //change scene to Home
