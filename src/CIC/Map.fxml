@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
@@ -37,7 +39,7 @@
                   <Font name="Segoe UI Bold" size="30.0" />
                </font>
             </Button>
-            <Slider majorTickUnit="0.5" max="2.5" min="0.5" minorTickCount="0" prefHeight="70.0" prefWidth="300.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="362.0" />
+            <Slider fx:id="scaler" majorTickUnit="0.5" max="3.0" min="1.0" minorTickCount="0" onMouseReleased="#changeScale" prefHeight="70.0" prefWidth="300.0" scaleX="1.5" scaleY="2.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="362.0" />
          </children></AnchorPane>
    </bottom>
    <center>
@@ -69,7 +71,7 @@
                         </Button>
                      </children>
                   </HBox>
-                  <ScrollPane prefHeight="468.0" prefWidth="200.0" style="-fx-border-color: #000000; -fx-border-width: 4px;">
+                  <ScrollPane fx:id="Scroller" fitToHeight="true" fitToWidth="true" pannable="true" prefHeight="468.0" prefWidth="200.0" style="-fx-border-color: #000000; -fx-border-width: 4px;">
                      <content>
                         <ImageView fx:id="mapImage" fitHeight="636.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
                            <viewport>

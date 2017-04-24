@@ -1,5 +1,6 @@
 package CIC;
 
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -29,6 +30,8 @@ public class Main extends Application {
         Parent par_Lost = FXMLLoader.load(getClass().getResource("Lost.fxml"));
         scn_Lost = new Scene(par_Lost, 1024, 768);
 
+        CardReader.init();
+
         //show the Home screen first
         stg_Main.setTitle("CIC Application");
         stg_Main.setScene(scn_Home);
@@ -37,12 +40,26 @@ public class Main extends Application {
 
     //functions used to move between scenes
     public static void goto_scn_home() {
+        Home_Controller.checkCardReader.setCycleCount(Timeline.INDEFINITE);
+        Home_Controller.checkCardReader.play();
         stg_Main.setScene(scn_Home);
     }
-    public static void goto_scn_PIN() { stg_Main.setScene(scn_PIN); }
-    public static void goto_scn_Meal() { stg_Main.setScene(scn_Meal); }
-    public static void goto_scn_Map() { stg_Main.setScene(scn_Map); }
-    public static void goto_scn_Lost() { stg_Main.setScene(scn_Lost); }
+    public static void goto_scn_PIN() {
+        Home_Controller.checkCardReader.pause();
+        stg_Main.setScene(scn_PIN);
+    }
+    public static void goto_scn_Meal() {
+        Home_Controller.checkCardReader.pause();
+        stg_Main.setScene(scn_Meal);
+    }
+    public static void goto_scn_Map() {
+        Home_Controller.checkCardReader.pause();
+        stg_Main.setScene(scn_Map);
+    }
+    public static void goto_scn_Lost() {
+        Home_Controller.checkCardReader.pause();
+        stg_Main.setScene(scn_Lost);
+    }
 
 
     public static void main(String[] args) {

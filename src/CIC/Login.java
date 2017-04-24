@@ -3,7 +3,7 @@ package CIC;
 /**
  * Created by bb36 on 2/27/2017.
  */
-//probably can be deleted?
+//unused, info received from APIController and parsed in Meal_Controller
 public class Login {
     private String name;
     private int meals=0;

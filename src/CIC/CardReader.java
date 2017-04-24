@@ -6,6 +6,8 @@ Author: Landon Sterk (ljs34)
 
 package CIC;
 
+import javafx.animation.Timeline;
+
 import java.io.File;
 import java.io.FileReader;
 import java.io.BufferedReader;
@@ -33,6 +35,8 @@ public class CardReader{
     }
     System.out.println("Card reader is ready on path " + filePath);
     active = true;
+    Home_Controller.checkCardReader.setCycleCount(Timeline.INDEFINITE);
+    Home_Controller.checkCardReader.play();
   }
 
 

@@ -27,6 +27,7 @@ import static java.awt.SystemColor.text;
  * @author ljs34
  */
 public class PIN_Controller implements Initializable {
+    //this screen is not used once card reader is implemented
 
     public String pin_answer;  //stores the user's PIN
     public String pin_entered;

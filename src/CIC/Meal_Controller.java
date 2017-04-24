@@ -51,9 +51,20 @@ public class Meal_Controller {
         Main.goto_scn_home();
     }
 
+    public boolean ValidId() {
+        String testID = APIController.getUser(Home_Controller.studentid, true);
+        if (testID.equals("error")) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     //gets info about who just logged in and displays appropriately
     public void setLabelTexts() {
-        user_info = APIController.getUser(PIN_Controller.pin_saved, true);
+        //if valid number, set labels and return true
+        //if not, return false
+        user_info = APIController.getUser(Home_Controller.studentid, true);
         try {
             JSONObject info = new JSONObject(user_info);
             str_uid = info.getString("uID");
