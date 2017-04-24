@@ -94,7 +94,7 @@ public class Home_Controller {
         //handle card swipe
         public void handle(ActionEvent event) {
             //check periodically for info in file
-            System.out.println("this is called every second on UI thread");
+            //System.out.println("this is called every second on UI thread");
             //file has info
             if ( CardReader.hasID() ) {
                 //save number in static variable to be used in Meal_Controller
