@@ -68,23 +68,23 @@ public class Home_Controller {
         Main.goto_scn_Map();
     }
 
-    //"Log In" button pressed
-    @FXML
-    private void pinPress(MouseEvent me) {
-        //change appearance of button
-        btn_pin_home.setTextFill(Color.rgb(255, 255, 255));
-        btn_pin_home.setStyle("-fx-background-color: #97252b; -fx-border-color: #97252b; -fx-border-width: 6px;");
-    }
-
-    //"Log In" button released
-    @FXML
-    private void pinRelease(MouseEvent me) {
-        //change appearance of button
-        btn_pin_home.setTextFill(Color.rgb(151, 37, 43));
-        btn_pin_home.setStyle("-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px;");
-        //change scene to PIN
-        Main.goto_scn_PIN();
-    }
+//    //"Log In" button pressed
+//    @FXML
+//    private void pinPress(MouseEvent me) {
+//        //change appearance of button
+//        btn_pin_home.setTextFill(Color.rgb(255, 255, 255));
+//        btn_pin_home.setStyle("-fx-background-color: #97252b; -fx-border-color: #97252b; -fx-border-width: 6px;");
+//    }
+//
+//    //"Log In" button released
+//    @FXML
+//    private void pinRelease(MouseEvent me) {
+//        //change appearance of button
+//        btn_pin_home.setTextFill(Color.rgb(151, 37, 43));
+//        btn_pin_home.setStyle("-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px;");
+//        //change scene to PIN
+//        Main.goto_scn_PIN();
+//    }
 
 
 

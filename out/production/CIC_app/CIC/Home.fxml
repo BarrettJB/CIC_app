@@ -26,12 +26,12 @@
    <bottom>
       <AnchorPane prefHeight="100.0" prefWidth="1024.0" style="-fx-background-color: #71B1C8;" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="467.0" layoutY="38.0" mnemonicParsing="false" onAction="#exitPress" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 6px; -fx-background-insets: 0;" text="Exit" textFill="#97252b" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="15.0">
+            <Button layoutX="467.0" layoutY="38.0" mnemonicParsing="false" onAction="#exitPress" prefHeight="70.0" prefWidth="337.0" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 6px; -fx-background-insets: 0;" text="About This Project" textFill="#97252b" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="15.0">
                <font>
                   <Font name="Segoe UI Bold" size="30.0" />
                </font>
             </Button>
-            <Button fx:id="btn_lost_home" layoutX="88.0" layoutY="8.0" mnemonicParsing="false" onMousePressed="#lostPress" onMouseReleased="#lostRelease" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px; -fx-background-insets: 0;" text="Lost ID" textFill="#97252b" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="15.0">
+            <Button fx:id="btn_lost_home" layoutX="88.0" layoutY="8.0" mnemonicParsing="false" onMousePressed="#lostPress" onMouseReleased="#lostRelease" prefHeight="70.0" prefWidth="383.0" style="-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px; -fx-background-insets: 0;" text="Meal Plan Information" textFill="#97252b" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="15.0">
                <font>
                   <Font name="Segoe UI Bold" size="30.0" />
                </font>
@@ -42,7 +42,7 @@
    <center>
       <AnchorPane prefHeight="518.0" prefWidth="824.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btn_pin_home" alignment="CENTER" layoutX="506.0" layoutY="205.0" mnemonicParsing="false" onMousePressed="#pinPress" onMouseReleased="#pinRelease" prefHeight="200.0" prefWidth="450.0" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 6px; -fx-background-insets: 0;" text="Swipe Student ID Card to Log In" textAlignment="CENTER" textFill="#97252b" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0">
+            <Button fx:id="btn_pin_home" alignment="CENTER" layoutX="506.0" layoutY="205.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="450.0" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 6px; -fx-background-insets: 0;" text="Swipe Student ID Card to Log In" textAlignment="CENTER" textFill="#97252b" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0">
                <font>
                   <Font name="Segoe UI Bold" size="44.0" />
                </font>

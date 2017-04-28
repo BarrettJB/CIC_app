@@ -28,9 +28,9 @@ public class Map_Controller implements Initializable{
     @FXML
     private ImageView mapImage;
     @FXML
-    private Image test;
+    private Image display_image;
     String mymap;
-    String scale;
+    Double scale;
 
     //"Home" button pressed
     @FXML
@@ -70,39 +70,38 @@ public class Map_Controller implements Initializable{
         mymap = src.getText();
         if (mymap.equals("Academic Buildings")) {
             //change image
-            test = new Image(getClass().getResource("images/CalvinMapAcademic.jpg").toString());
+            display_image = new Image(getClass().getResource("images/CalvinMapAcademic.jpg").toString());
             //change position
         } else if (mymap.equals("Residence Halls")) {
             //change image
-            test = new Image(getClass().getResource("images/CalvinMapResidence.jpg").toString());
+            display_image = new Image(getClass().getResource("images/CalvinMapResidence.jpg").toString());
             //change position
         } else if (mymap.equals("KE Apartments")) {
             //change image
-            test = new Image(getClass().getResource("images/CalvinMapKE.jpg").toString());
+            display_image = new Image(getClass().getResource("images/CalvinMapKE.jpg").toString());
             //change position
         } else if (mymap.equals("Athletics")) {
             //change image
-            test = new Image(getClass().getResource("images/CalvinMapAthletics.jpg").toString());
+            display_image = new Image(getClass().getResource("images/CalvinMapAthletics.jpg").toString());
             //change position
         } else {
             //full image
-            test = new Image(getClass().getResource("images/CalvinMapFull.jpg").toString());            //full position
+            display_image = new Image(getClass().getResource("images/CalvinMapFull.jpg").toString());            //full position
         }
-        mapImage.setImage(test);
+        mapImage.setImage(display_image);
     }
 
     @FXML
     private void changeScale(MouseEvent me) {
-        scale = Double.toString(scaler.getValue());
-        mapImage.setStyle("-fx-scale-x: "+scale+"; -fx-scale-y: "+scale+"; -fx-scale-z: "+scale+";");
-        Scroller.setHmax(scaler.getValue());
-        Scroller.setVmax(scaler.getValue());
+        scale = scaler.getValue();
+        mapImage.setFitWidth(1000*scale);
+        mapImage.setFitHeight(636*scale);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        test = new Image(getClass().getResource("images/CalvinMapFull.jpg").toString());
-        mapImage.setImage(test);
+        display_image = new Image(getClass().getResource("images/CalvinMapFull.jpg").toString());
+        mapImage.setImage(display_image);
     }
 
 }
