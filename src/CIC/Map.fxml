@@ -71,7 +71,7 @@
                         </Button>
                      </children>
                   </HBox>
-                  <ScrollPane fx:id="Scroller" hbarPolicy="ALWAYS" pannable="true" prefHeight="468.0" prefWidth="824.0" style="-fx-border-color: #000000; -fx-border-width: 4px;" vbarPolicy="ALWAYS" VBox.vgrow="ALWAYS">
+                  <ScrollPane fx:id="sp" hbarPolicy="ALWAYS" pannable="true" prefHeight="468.0" prefWidth="824.0" style="-fx-border-color: #000000; -fx-border-width: 4px;" vbarPolicy="ALWAYS" VBox.vgrow="ALWAYS">
                      <content>
                         <ImageView fx:id="mapImage" fitHeight="636.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
                            <viewport>

@@ -24,7 +24,7 @@ public class Map_Controller implements Initializable{
     @FXML
     private Slider scaler;
     @FXML
-    private ScrollPane Scroller;
+    private ScrollPane sp;
     @FXML
     private ImageView mapImage;
     @FXML
@@ -72,21 +72,47 @@ public class Map_Controller implements Initializable{
             //change image
             display_image = new Image(getClass().getResource("images/CalvinMapAcademic.jpg").toString());
             //change position
+            scaler.setValue(1.5);
+            mapImage.setFitWidth(1000*1.5);
+            mapImage.setFitHeight(636*1.5);
+            sp.setVvalue(.6);
+            sp.setHvalue(.2);
         } else if (mymap.equals("Residence Halls")) {
             //change image
             display_image = new Image(getClass().getResource("images/CalvinMapResidence.jpg").toString());
             //change position
+            scaler.setValue(1.5);
+            mapImage.setFitWidth(1000*1.5);
+            mapImage.setFitHeight(636*1.5);
+            sp.setVvalue(.4);
+            sp.setHvalue(.2);
         } else if (mymap.equals("KE Apartments")) {
             //change image
             display_image = new Image(getClass().getResource("images/CalvinMapKE.jpg").toString());
             //change position
+            scaler.setValue(2);
+            mapImage.setFitWidth(1000*2);
+            mapImage.setFitHeight(636*2);
+            sp.setVvalue(1);
+            sp.setHvalue(.4);
         } else if (mymap.equals("Athletics")) {
             //change image
             display_image = new Image(getClass().getResource("images/CalvinMapAthletics.jpg").toString());
             //change position
+            scaler.setValue(1.5);
+            mapImage.setFitWidth(1000*1.5);
+            mapImage.setFitHeight(636*1.5);
+            sp.setVvalue(.2);
+            sp.setHvalue(.1);
         } else {
             //full image
-            display_image = new Image(getClass().getResource("images/CalvinMapFull.jpg").toString());            //full position
+            display_image = new Image(getClass().getResource("images/CalvinMapFull.jpg").toString());
+            //full position
+            scaler.setValue(1);
+            mapImage.setFitWidth(1000);
+            mapImage.setFitHeight(636);
+            sp.setVvalue(0);
+            sp.setHvalue(0);
         }
         mapImage.setImage(display_image);
     }
