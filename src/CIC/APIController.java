@@ -13,11 +13,15 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.ConnectException;
+import java.net.HttpURLConnection;
+
+import java.net.URLEncoder;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import org.json.JSONObject;
 
 
 public class APIController implements Initializable{
@@ -106,16 +110,46 @@ public class APIController implements Initializable{
         @param3: String filePath, the path to test. For kiosk, the path is /test
         @param4: boolean verbose, if enabled, will have print statements to track test process
          */
-        String filepath = "/test/user/" + userID;
+        String apiKey = System.getenv("API_KEY");
+        try {
+            apiKey = URLEncoder.encode(apiKey, "utf-8");
+        }
+        catch (java.io.UnsupportedEncodingException e){
+            System.err.println("Uh oh, bad encoding");
+        }
+//        if (verbose) System.out.println("API Key used: " + apiKey);
+        String filepath = "/build/id/" + userID;
+        String query = "?apiKey=" + apiKey;
+
+//        if (verbose) System.out.println("Query : " + query);
+        filepath += query;
         String msg = "";
         try{
             if (verbose){
-                System.out.format("Sending a message to http://%s:%d%s \n", API_SERVER_NAME, API_SERVER_PORT, filepath);
+//                System.out.format("Sending a message to http://%s:%d%s \n", API_SERVER_NAME, API_SERVER_PORT, filepath);
             }
             URL u = new URL("http", API_SERVER_NAME, API_SERVER_PORT, filepath);
+            HttpURLConnection conn = (HttpURLConnection) u.openConnection();
+//            conn.addRequestProperty("Content-Type", "application/JSON");
+//            JSONObject body = new JSONObject();
+//            body.put("apiKey", System.getenv("API_KEY"));
+//            System.out.println("JSON Body text: " + body.toString());
+//            conn.setRequestProperty("Content-Length", Integer.toString(body.toString().length()));
+//            conn.setRequestMethod("GET");
+//            conn.setDoOutput(true);
+//            if (verbose) System.out.println("Current HTTP Verb: " + conn.getRequestMethod());
+//            try {
+//                conn.getOutputStream().write(body.toString().getBytes("UTF8"));
+//                System.out.println("Message sent");
+//            }
+//            catch (Exception e){
+//                System.out.println("Error caught");
+//                System.err.println(e);
+//            }
+
             // read the message contents
             // yes, this is TOTAL BS that Java connection objects don't have better reading methods
-            BufferedReader br = new BufferedReader(new InputStreamReader(u.openStream()));
+            BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
             String strTemp;
             while (null != (strTemp = br.readLine())) {
                 msg += strTemp + '\n';
@@ -133,7 +167,8 @@ public class APIController implements Initializable{
         }
         catch (Exception e){
             // Other exceptions, e.g. IOException
-            System.err.print("Exception encountered:\n" + e.getLocalizedMessage());
+            System.err.println("Exception encountered:\n" + e.getLocalizedMessage());
+            System.err.println(e);
             return "error";
         }
 

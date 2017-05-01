@@ -18,6 +18,8 @@ import jdk.nashorn.internal.parser.JSONParser;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import java.time.Instant;
+import java.time.Duration;
 /**
  * Created by bb36 on 2/13/2017.
  */
@@ -72,23 +74,39 @@ public class Meal_Controller {
             Double num_bonus = info.getDouble("bonusBucks");
             str_bonus = num_bonus.toString();
             str_update = info.getString("updated");
-            JSONObject meals = info.getJSONObject("mealPlan");
-            Integer num_meals = meals.getInt("count");
+            long diff = Duration.between(Instant.parse(str_update), Instant.now()).getSeconds();
+            if (diff < 60) str_update = (diff + " seconds ago");
+            else if ((diff = (diff / 60)) < 60) str_update = (diff + " minutes ago");
+            else if ((diff = (diff / 60)) < 24) str_update = (diff + " hours ago");
+            else str_update = ((diff = (diff / 24)) + " days ago");
+            Integer num_meals = 0;
+            Boolean weekly = false;
+            Integer max_meals = 0;
+            try {
+                JSONObject meals = info.getJSONObject("mealPlan");
+                num_meals = meals.getInt("count");
+                weekly = meals.getBoolean("isWeekly");
+                max_meals = meals.getInt("max");
+            }
+            catch (JSONException j) {
+                System.out.println("Warning: JSON Exception when parsing meal plan!\n" + j);
+            }
+
             str_meals = num_meals.toString();
-            Boolean weekly = meals.getBoolean("isWeekly");
             if (weekly) {
                 str_weekly = "this week";
             } else {
                 str_weekly = "this semester";
             }
-            Integer max_meals = meals.getInt("maxMeals");
+
             str_maxmeals = max_meals.toString();
 
 
         } catch (Exception ex) {
             System.out.println("test");
+            System.out.println(ex);
         }
-        array_name = str_name_temp.split(", ");
+        array_name = str_name_temp.split(",");
         str_name = array_name[1]+" "+array_name[0];
         text_name.setText(str_name);
         text_uid.setText(str_uid);
