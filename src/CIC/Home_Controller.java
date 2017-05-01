@@ -128,10 +128,9 @@ public class Home_Controller {
                         Parent root = loader.load();
                         Meal_Controller controller = loader.getController();
                         //returns true if valid student id number
-                        if (controller.ValidId()) {
+                        //sets person-specific values
+                        if (controller.setLabelTexts()) {
                             //set person-specific values
-                            controller.setLabelTexts();
-                            //change scene
                             Main.scn_Home.setRoot(root);
                         }
                     } catch (IOException e) {

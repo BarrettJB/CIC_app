@@ -53,66 +53,69 @@ public class Meal_Controller {
         Main.goto_scn_home();
     }
 
-    public boolean ValidId() {
-        String testID = APIController.getUser(Home_Controller.studentid, true);
-        if (testID.equals("error")) {
-            return false;
-        } else {
-            return true;
-        }
-    }
+//    public boolean ValidId() {
+//        String testID = APIController.getUser(Home_Controller.studentid, true);
+//        if (testID.equals("error")) {
+//            return false;
+//        } else {
+//            return true;
+//        }
+//    }
 
     //gets info about who just logged in and displays appropriately
-    public void setLabelTexts() {
+    public boolean setLabelTexts() {
         //if valid number, set labels and return true
         //if not, return false
         user_info = APIController.getUser(Home_Controller.studentid, true);
-        try {
-            JSONObject info = new JSONObject(user_info);
-            str_uid = info.getString("uID");
-            str_name_temp = info.getString("name");
-            Double num_bonus = info.getDouble("bonusBucks");
-            str_bonus = num_bonus.toString();
-            str_update = info.getString("updated");
-            long diff = Duration.between(Instant.parse(str_update), Instant.now()).getSeconds();
-            if (diff < 60) str_update = (diff + " seconds ago");
-            else if ((diff = (diff / 60)) < 60) str_update = (diff + " minutes ago");
-            else if ((diff = (diff / 60)) < 24) str_update = (diff + " hours ago");
-            else str_update = ((diff = (diff / 24)) + " days ago");
-            Integer num_meals = 0;
-            Boolean weekly = false;
-            Integer max_meals = 0;
+        if (user_info.equals("error")) {
+            return false;
+        } else {
             try {
-                JSONObject meals = info.getJSONObject("mealPlan");
-                num_meals = meals.getInt("count");
-                weekly = meals.getBoolean("isWeekly");
-                max_meals = meals.getInt("max");
+                JSONObject info = new JSONObject(user_info);
+                str_uid = info.getString("uID");
+                str_name_temp = info.getString("name");
+                Double num_bonus = info.getDouble("bonusBucks");
+                str_bonus = num_bonus.toString();
+                str_update = info.getString("updated");
+                long diff = Duration.between(Instant.parse(str_update), Instant.now()).getSeconds();
+                if (diff < 60) str_update = (diff + " seconds ago");
+                else if ((diff = (diff / 60)) < 60) str_update = (diff + " minutes ago");
+                else if ((diff = (diff / 60)) < 24) str_update = (diff + " hours ago");
+                else str_update = ((diff = (diff / 24)) + " days ago");
+                Integer num_meals = 0;
+                Boolean weekly = false;
+                Integer max_meals = 0;
+                try {
+                    JSONObject meals = info.getJSONObject("mealPlan");
+                    num_meals = meals.getInt("count");
+                    weekly = meals.getBoolean("isWeekly");
+                    max_meals = meals.getInt("max");
+                } catch (JSONException j) {
+                    System.out.println("Warning: JSON Exception when parsing meal plan!\n" + j);
+                }
+
+                str_meals = num_meals.toString();
+                if (weekly) {
+                    str_weekly = "this week";
+                } else {
+                    str_weekly = "this semester";
+                }
+
+                str_maxmeals = max_meals.toString();
+
+
+            } catch (Exception ex) {
+                System.out.println("test");
+                System.out.println(ex);
             }
-            catch (JSONException j) {
-                System.out.println("Warning: JSON Exception when parsing meal plan!\n" + j);
-            }
-
-            str_meals = num_meals.toString();
-            if (weekly) {
-                str_weekly = "this week";
-            } else {
-                str_weekly = "this semester";
-            }
-
-            str_maxmeals = max_meals.toString();
-
-
-        } catch (Exception ex) {
-            System.out.println("test");
-            System.out.println(ex);
+            array_name = str_name_temp.split(",");
+            str_name = array_name[1] + " " + array_name[0];
+            text_name.setText(str_name);
+            text_uid.setText(str_uid);
+            text_bonus.setText(str_bonus);
+            text_meals.setText(str_meals + " of " + str_maxmeals + " left " + str_weekly);
+            text_update.setText(str_update);
+            return true;
         }
-        array_name = str_name_temp.split(",");
-        str_name = array_name[1]+" "+array_name[0];
-        text_name.setText(str_name);
-        text_uid.setText(str_uid);
-        text_bonus.setText(str_bonus);
-        text_meals.setText(str_meals+" of "+str_maxmeals+" left "+str_weekly);
-        text_update.setText(str_update);
     }
-
 }

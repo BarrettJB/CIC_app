@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="307f5cde-d151-4d8e-801f-7d5d9d690f8b" name="Default" comment="Fixed NPE in URL Encoder">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CIC/About.fxml" afterPath="$PROJECT_DIR$/src/CIC/About.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CIC/Lost.fxml" afterPath="$PROJECT_DIR$/src/CIC/Lost.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CIC/Map.fxml" afterPath="$PROJECT_DIR$/src/CIC/Map.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CIC/Meal.fxml" afterPath="$PROJECT_DIR$/src/CIC/Meal.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CIC/PIN.fxml" afterPath="$PROJECT_DIR$/src/CIC/PIN.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CIC/Template.fxml" afterPath="$PROJECT_DIR$/src/CIC/Template.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CIC/Home_Controller.java" afterPath="$PROJECT_DIR$/src/CIC/Home_Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CIC/Meal_Controller.java" afterPath="$PROJECT_DIR$/src/CIC/Meal_Controller.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Home_Controller.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Home_Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CIC/Home_Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="40" column="39" lean-forward="true" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+            <state relative-caret-position="323">
+              <caret line="130" column="53" lean-forward="false" selection-start-line="130" selection-start-column="53" selection-end-line="130" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,7 +93,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="About_Controller.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="About_Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CIC/About_Controller.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -111,8 +106,8 @@
       <file leaf-file-name="APIController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CIC/APIController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="115" column="9" lean-forward="true" selection-start-line="115" selection-start-column="9" selection-end-line="115" selection-end-column="9" />
+            <state relative-caret-position="-85">
+              <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -121,8 +116,8 @@
       <file leaf-file-name="Meal_Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CIC/Meal_Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="105" column="36" lean-forward="false" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
+            <state relative-caret-position="301">
+              <caret line="62" column="7" lean-forward="true" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -181,13 +176,13 @@
         <option value="$PROJECT_DIR$/src/CIC/Lost.fxml" />
         <option value="$PROJECT_DIR$/src/CIC/Lost_Controller.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
-        <option value="$PROJECT_DIR$/src/CIC/Meal_Controller.java" />
         <option value="$PROJECT_DIR$/src/CIC/APIController.java" />
         <option value="$PROJECT_DIR$/src/CIC/Map_Controller.java" />
         <option value="$PROJECT_DIR$/src/CIC/Main.java" />
         <option value="$PROJECT_DIR$/src/CIC/About_Controller.java" />
-        <option value="$PROJECT_DIR$/src/CIC/Home_Controller.java" />
         <option value="$PROJECT_DIR$/src/CIC/About.fxml" />
+        <option value="$PROJECT_DIR$/src/CIC/Meal_Controller.java" />
+        <option value="$PROJECT_DIR$/src/CIC/Home_Controller.java" />
       </list>
     </option>
   </component>
@@ -1020,22 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CIC/Meal_Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="105" column="36" lean-forward="false" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CIC/APIController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="115" column="9" lean-forward="true" selection-start-line="115" selection-start-column="9" selection-end-line="115" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CIC/Lost_Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1081,16 +1060,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CIC/Home_Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="39" lean-forward="true" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CIC/About.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1107,6 +1076,32 @@
         <state relative-caret-position="306">
           <caret line="21" column="71" lean-forward="true" selection-start-line="21" selection-start-column="71" selection-end-line="21" selection-end-column="71" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CIC/APIController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CIC/Meal_Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="62" column="7" lean-forward="true" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CIC/Home_Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="130" column="53" lean-forward="false" selection-start-line="130" selection-start-column="53" selection-end-line="130" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
