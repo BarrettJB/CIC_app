@@ -117,6 +117,10 @@ public class APIController implements Initializable{
         catch (java.io.UnsupportedEncodingException e){
             System.err.println("Uh oh, bad encoding");
         }
+        catch (Exception e){
+            System.err.println(e);
+            apiKey = System.getenv("API_KEY");
+        }
 //        if (verbose) System.out.println("API Key used: " + apiKey);
         String filepath = "/build/id/" + userID;
         String query = "?apiKey=" + apiKey;
