@@ -15,6 +15,11 @@
                   <Font name="Segoe UI Bold" size="62.0" />
                </font>
             </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="824.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@images/Logo_cleaned2.png" />
+               </image>
+            </ImageView>
          </children></AnchorPane>
    </top>
    <left>
@@ -23,12 +28,12 @@
    <center>
       <AnchorPane prefHeight="518.0" prefWidth="924.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="text_inst1" alignment="TOP_LEFT" layoutX="29.0" layoutY="45.0" prefHeight="35.0" prefWidth="256.0" text="Weekly Meal Plans:" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
+            <Label alignment="TOP_LEFT" layoutX="29.0" layoutY="45.0" prefHeight="35.0" prefWidth="290.0" text="Weekly Meal Plans:" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
                <font>
                   <Font name="Segoe UI" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="text_inst2" alignment="TOP_LEFT" layoutX="45.0" layoutY="230.0" prefHeight="38.0" prefWidth="225.0" text="Block Meal Plans:" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="238.0">
+            <Label alignment="TOP_LEFT" layoutX="45.0" layoutY="230.0" prefHeight="38.0" prefWidth="306.0" text="Block Meal Plans:" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="238.0">
                <font>
                   <Font name="Segoe UI" size="26.0" />
                </font>
@@ -58,7 +63,7 @@
                   <Font name="Segoe UI" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="text_inst16" alignment="TOP_LEFT" layoutX="224.0" layoutY="290.0" prefHeight="35.0" prefWidth="256.0" text="2 meals/week" wrapText="true" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="290.0">
+            <Label fx:id="text_inst16" alignment="TOP_LEFT" layoutX="224.0" layoutY="290.0" prefHeight="35.0" prefWidth="224.0" text="2 meals/week" wrapText="true" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="290.0">
                <font>
                   <Font name="Segoe UI" size="26.0" />
                </font>
@@ -98,7 +103,7 @@
                   <Font name="Segoe UI" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="text_inst121" alignment="TOP_LEFT" layoutX="517.0" layoutY="175.0" prefHeight="35.0" prefWidth="201.0" text="\$4,560" wrapText="true" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="186.0">
+            <Label fx:id="text_inst121" alignment="TOP_LEFT" layoutX="517.0" layoutY="175.0" prefHeight="35.0" prefWidth="96.0" text="\$4,560" wrapText="true" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="186.0">
                <font>
                   <Font name="Segoe UI" size="26.0" />
                </font>
@@ -108,7 +113,7 @@
                   <Font name="Segoe UI" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="text_inst123" alignment="TOP_LEFT" layoutX="526.0" layoutY="132.0" prefHeight="35.0" prefWidth="201.0" text="\$4,780" wrapText="true" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="134.0">
+            <Label fx:id="text_inst123" alignment="TOP_LEFT" layoutX="526.0" layoutY="132.0" prefHeight="35.0" prefWidth="107.0" text="\$4,780" wrapText="true" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="134.0">
                <font>
                   <Font name="Segoe UI" size="26.0" />
                </font>
@@ -118,7 +123,7 @@
                   <Font name="Segoe UI" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="text_inst125" alignment="TOP_LEFT" layoutX="523.0" layoutY="91.0" prefHeight="35.0" prefWidth="201.0" text="\$4,920" wrapText="true" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="82.0">
+            <Label fx:id="text_inst125" alignment="TOP_LEFT" layoutX="523.0" layoutY="91.0" prefHeight="35.0" prefWidth="119.0" text="\$4,920" wrapText="true" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="82.0">
                <font>
                   <Font name="Segoe UI" size="26.0" />
                </font>

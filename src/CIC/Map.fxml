@@ -18,6 +18,11 @@
                   <Font name="Segoe UI Bold" size="62.0" />
                </font>
             </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="819.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@images/Logo_cleaned2.png" />
+               </image>
+            </ImageView>
          </children></AnchorPane>
    </top>
    <left>
