@@ -12,7 +12,7 @@ import javafx.stage.WindowEvent;
 public class Main extends Application {
     //initialize stage and scenes
     static Stage stg_Main;
-    static Scene scn_PIN, scn_Home, scn_Meal, scn_Map, scn_Lost;
+    static Scene scn_PIN, scn_Home, scn_Meal, scn_Map, scn_Lost, scn_About;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -29,6 +29,8 @@ public class Main extends Application {
         scn_Map = new Scene(par_Map, 1024,768);
         Parent par_Lost = FXMLLoader.load(getClass().getResource("Lost.fxml"));
         scn_Lost = new Scene(par_Lost, 1024, 768);
+        Parent par_About = FXMLLoader.load(getClass().getResource("About.fxml"));
+        scn_About = new Scene(par_About, 1024, 768);
 
         CardReader.init();
 
@@ -59,6 +61,10 @@ public class Main extends Application {
     public static void goto_scn_Lost() {
         Home_Controller.checkCardReader.pause();
         stg_Main.setScene(scn_Lost);
+    }
+    public static void goto_scn_About() {
+        Home_Controller.checkCardReader.pause();
+        stg_Main.setScene(scn_About);
     }
 
 

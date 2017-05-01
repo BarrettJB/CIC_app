@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CIC.About_Controller">
+   <top>
+      <AnchorPane prefHeight="150.0" prefWidth="1024.0" style="-fx-background-color: #71B1C8;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="153.0" layoutY="67.0" text="About This Project" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="62.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="518.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <AnchorPane prefHeight="518.0" prefWidth="824.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER" />
+   </center>
+   <right>
+      <AnchorPane prefHeight="518.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="100.0" prefWidth="1024.0" style="-fx-background-color: #71B1C8;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btn_home_About" layoutX="850.0" layoutY="38.0" mnemonicParsing="false" onMousePressed="#homePress" onMouseReleased="#homeRelease" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 6px; -fx-background-insets: 0;" text="Home" textFill="#97252b" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="30.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

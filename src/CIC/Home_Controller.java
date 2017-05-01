@@ -23,13 +23,29 @@ import java.util.ResourceBundle;
 public class Home_Controller {
     //initialize buttons on home screen
     @FXML
-    private Button btn_pin_home, btn_map_home, btn_lost_home;
+    private Button btn_pin_home, btn_map_home, btn_lost_home, btn_about_home;
     static String studentid;
 
     //exits program, hide when finished
+//    @FXML
+//    private void exitPress(ActionEvent event) {System.exit(0);}
+
+    //"About the Project" button pressed
     @FXML
-    private void exitPress(ActionEvent event) {
-        System.exit(0);
+    private void aboutPress(MouseEvent me) {
+        //change appearance of button
+        btn_about_home.setTextFill(Color.rgb(255, 255, 255));
+        btn_about_home.setStyle("-fx-background-color: #97252b; -fx-border-color: #97252b; -fx-border-width: 6px;");
+    }
+
+    //"About the Project" button released
+    @FXML
+    private void aboutRelease(MouseEvent me) {
+        //change appearance of button
+        btn_about_home.setTextFill(Color.rgb(151, 37, 43));
+        btn_about_home.setStyle("-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px;");
+        //change scene to Lost
+        Main.goto_scn_About();
     }
 
     //"Lost ID" button pressed
