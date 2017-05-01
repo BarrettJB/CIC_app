@@ -10,6 +10,9 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -71,12 +74,14 @@ public class Meal_Controller {
             return false;
         } else {
             try {
+                //parse user data
                 JSONObject info = new JSONObject(user_info);
                 str_uid = info.getString("uID");
                 str_name_temp = info.getString("name");
                 Double num_bonus = info.getDouble("bonusBucks");
                 str_bonus = num_bonus.toString();
                 str_update = info.getString("updated");
+                //format date into readable time
                 long diff = Duration.between(Instant.parse(str_update), Instant.now()).getSeconds();
                 if (diff < 60) str_update = (diff + " seconds ago");
                 else if ((diff = (diff / 60)) < 60) str_update = (diff + " minutes ago");
@@ -108,6 +113,7 @@ public class Meal_Controller {
                 System.out.println("test");
                 System.out.println(ex);
             }
+            //set labels with user data
             array_name = str_name_temp.split(",");
             str_name = array_name[1] + " " + array_name[0];
             text_name.setText(str_name);
@@ -115,6 +121,18 @@ public class Meal_Controller {
             text_bonus.setText(str_bonus);
             text_meals.setText(str_meals + " of " + str_maxmeals + " left " + str_weekly);
             text_update.setText(str_update);
+
+            //record id and time to log
+            try {
+                File f = new File("cardlog.txt");
+                FileWriter fw = new FileWriter(f,true);
+                fw.write(Instant.now().toString()+" "+str_uid+"\n");
+                fw.flush();
+                fw.close();
+            } catch (IOException e) {
+                System.out.println("log entry failed");
+            }
+
             return true;
         }
     }
