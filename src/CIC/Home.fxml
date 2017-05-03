@@ -42,7 +42,7 @@
    <center>
       <AnchorPane prefHeight="518.0" prefWidth="824.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btn_home_pin" alignment="CENTER" layoutX="506.0" layoutY="205.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="450.0" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 6px; -fx-background-insets: 0;" text="Swipe Student ID Card to Log In" textAlignment="CENTER" textFill="#97252b" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0">
+            <Button fx:id="btn_home_pin" alignment="CENTER" layoutX="506.0" layoutY="205.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="450.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff; -fx-border-width: 6px; -fx-background-insets: 0;" text="Swipe Student ID Card to Log In" textAlignment="CENTER" textFill="#97252b" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0">
                <font>
                   <Font name="Segoe UI Bold" size="44.0" />
                </font>
