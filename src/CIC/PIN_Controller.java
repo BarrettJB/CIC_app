@@ -27,7 +27,9 @@ import static java.awt.SystemColor.text;
  * @author ljs34
  */
 public class PIN_Controller implements Initializable {
-    //this screen is not used once card reader is implemented
+    //this class is not used once card reader is implemented
+    //The PIN authentication is no longer needed according to CIT 4/17
+    //If PIN authentication is desired in the future, this controller can be updated and used
 
     public String pin_answer;  //stores the user's PIN
     public String pin_entered;
@@ -41,8 +43,7 @@ public class PIN_Controller implements Initializable {
     public static Hashtable students;
 
     //initialize button ids
-    //@FXML private Button btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9;
-    @FXML private Button btn_home_PIN, btn_enter, btn_clear;
+    @FXML private Button btn_pin_home, btn_enter, btn_clear;
 
     //PIN buttons pressed
     @FXML
@@ -88,7 +89,8 @@ public class PIN_Controller implements Initializable {
 
     }
 
-    //can probably delete now?
+    //can be used to generate a random pin
+    //createed for testing purposes
 //    @FXML
 //    private void generatePIN(ActionEvent event) {
 //        System.out.println("Randomly generating a new PIN");
@@ -151,8 +153,8 @@ public class PIN_Controller implements Initializable {
     private void homePress(MouseEvent me) {
         System.out.println("Clearing the entered PIN");
         //change appearance of button
-        btn_home_PIN.setTextFill(Color.rgb(255,255,255));
-        btn_home_PIN.setStyle("-fx-background-color: #97252b; -fx-border-color: #97252b; -fx-border-width: 6px;");
+        btn_pin_home.setTextFill(Color.rgb(255,255,255));
+        btn_pin_home.setStyle("-fx-background-color: #97252b; -fx-border-color: #97252b; -fx-border-width: 6px;");
     }
     //"Home" button released
     @FXML
@@ -163,8 +165,8 @@ public class PIN_Controller implements Initializable {
         text_output.setText("");
         instructions.setText("Enter your PIN");
         //change appearance of button
-        btn_home_PIN.setTextFill(Color.rgb(151,37,43));
-        btn_home_PIN.setStyle("-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px;");
+        btn_pin_home.setTextFill(Color.rgb(151,37,43));
+        btn_pin_home.setStyle("-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px;");
         //change scene to Home
         Main.goto_scn_home();
     }
@@ -178,11 +180,6 @@ public class PIN_Controller implements Initializable {
         pin_entered = "";
         text_output.setText("");
         instructions.setText("Enter your PIN");
-        //replace with info from server
-//        students = new Hashtable();
-//        students.put("1234","Emily Floch, 13, 21, $75.00");
-//        students.put("5678","Barrett Bryson, 20, 0, $5.00");
-//        students.put("2468","Landon Sterk, 5, 60, $0.00");
 
     }
 

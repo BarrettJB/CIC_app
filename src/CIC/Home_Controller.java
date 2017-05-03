@@ -21,9 +21,10 @@ import java.util.ResourceBundle;
  * Created by bb36 on 2/13/2017.
  */
 public class Home_Controller {
+    //this class is the welcome screen of the kiosk
     //initialize buttons on home screen
     @FXML
-    private Button btn_pin_home, btn_map_home, btn_lost_home, btn_about_home;
+    private Button btn_home_map, btn_home_plan, btn_home_about;
     static String studentid;
 
     //exits program, hide when finished
@@ -34,70 +35,68 @@ public class Home_Controller {
     @FXML
     private void aboutPress(MouseEvent me) {
         //change appearance of button
-        btn_about_home.setTextFill(Color.rgb(255, 255, 255));
-        btn_about_home.setStyle("-fx-background-color: #97252b; -fx-border-color: #97252b; -fx-border-width: 6px;");
+        btn_home_about.setTextFill(Color.rgb(255, 255, 255));
+        btn_home_about.setStyle("-fx-background-color: #97252b; -fx-border-color: #97252b; -fx-border-width: 6px;");
     }
-
     //"About the Project" button released
     @FXML
     private void aboutRelease(MouseEvent me) {
         //change appearance of button
-        btn_about_home.setTextFill(Color.rgb(151, 37, 43));
-        btn_about_home.setStyle("-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px;");
-        //change scene to Lost
+        btn_home_about.setTextFill(Color.rgb(151, 37, 43));
+        btn_home_about.setStyle("-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px;");
+        //change scene to About Us
         Main.goto_scn_About();
     }
 
-    //"Lost ID" button pressed
+    //"Meal Plan Information" button pressed
     @FXML
-    private void lostPress(MouseEvent me) {
+    private void planPress(MouseEvent me) {
         //change appearance of button
-        btn_lost_home.setTextFill(Color.rgb(255, 255, 255));
-        btn_lost_home.setStyle("-fx-background-color: #97252b; -fx-border-color: #97252b; -fx-border-width: 6px;");
+        btn_home_plan.setTextFill(Color.rgb(255, 255, 255));
+        btn_home_plan.setStyle("-fx-background-color: #97252b; -fx-border-color: #97252b; -fx-border-width: 6px;");
     }
-
-    //"Lost ID" button released
+    //"Meal Plan Information" button released
     @FXML
-    private void lostRelease(MouseEvent me) {
+    private void planRelease(MouseEvent me) {
         //change appearance of button
-        btn_lost_home.setTextFill(Color.rgb(151, 37, 43));
-        btn_lost_home.setStyle("-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px;");
-        //change scene to Lost
-        Main.goto_scn_Lost();
+        btn_home_plan.setTextFill(Color.rgb(151, 37, 43));
+        btn_home_plan.setStyle("-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px;");
+        //change scene to Meal Plans
+        Main.goto_scn_Plan();
     }
 
     //"Campus Map" button pressed
     @FXML
     private void mapPress(MouseEvent me) {
         //change appearance of button
-        btn_map_home.setTextFill(Color.rgb(255, 255, 255));
-        btn_map_home.setStyle("-fx-background-color: #97252b; -fx-border-color: #97252b; -fx-border-width: 6px;");
+        btn_home_map.setTextFill(Color.rgb(255, 255, 255));
+        btn_home_map.setStyle("-fx-background-color: #97252b; -fx-border-color: #97252b; -fx-border-width: 6px;");
     }
-
     //"Campus Map" button released
     @FXML
     private void mapRelease(MouseEvent me) {
         //change appearance of button
-        btn_map_home.setTextFill(Color.rgb(151, 37, 43));
-        btn_map_home.setStyle("-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px;");
+        btn_home_map.setTextFill(Color.rgb(151, 37, 43));
+        btn_home_map.setStyle("-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px;");
         //change scene to Map
         Main.goto_scn_Map();
     }
 
+    //uncomment to use PIN screen
 //    //"Log In" button pressed
 //    @FXML
 //    private void pinPress(MouseEvent me) {
 //        //change appearance of button
-//        btn_pin_home.setTextFill(Color.rgb(255, 255, 255));
-//        btn_pin_home.setStyle("-fx-background-color: #97252b; -fx-border-color: #97252b; -fx-border-width: 6px;");
+//        btn_home_pin.setTextFill(Color.rgb(255, 255, 255));
+//        btn_home_pin.setStyle("-fx-background-color: #97252b; -fx-border-color: #97252b; -fx-border-width: 6px;");
 //    }
 //
 //    //"Log In" button released
 //    @FXML
 //    private void pinRelease(MouseEvent me) {
 //        //change appearance of button
-//        btn_pin_home.setTextFill(Color.rgb(151, 37, 43));
-//        btn_pin_home.setStyle("-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px;");
+//        btn_home_pin.setTextFill(Color.rgb(151, 37, 43));
+//        btn_home_pin.setStyle("-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px;");
 //        //change scene to PIN
 //        Main.goto_scn_PIN();
 //    }

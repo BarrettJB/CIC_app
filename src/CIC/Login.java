@@ -4,6 +4,7 @@ package CIC;
  * Created by bb36 on 2/27/2017.
  */
 //unused, info received from APIController and parsed in Meal_Controller
+    //can probably be deleted
 public class Login {
     private String name;
     private int meals=0;

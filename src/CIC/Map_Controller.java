@@ -19,10 +19,11 @@ import java.util.ResourceBundle;
  * Created by bb36 on 2/13/2017.
  */
 public class Map_Controller implements Initializable{
+    //this class displays an interactive map of campus
     @FXML
-    private Button btn_home_Map, btn_map_academic, btn_map_residence, btn_map_apartments, btn_map_athletics,btn_map_full;
+    private Button btn_map_home;
     @FXML
-    private Slider scaler;
+    private Slider zoom;
     @FXML
     private ScrollPane sp;
     @FXML
@@ -36,15 +37,15 @@ public class Map_Controller implements Initializable{
     @FXML
     private void homePress(MouseEvent me) {
         //change appearance of button
-        btn_home_Map.setTextFill(Color.rgb(255,255,255));
-        btn_home_Map.setStyle("-fx-background-color: #97252b; -fx-border-color: #97252b; -fx-border-width: 6px;");
+        btn_map_home.setTextFill(Color.rgb(255,255,255));
+        btn_map_home.setStyle("-fx-background-color: #97252b; -fx-border-color: #97252b; -fx-border-width: 6px;");
     }
     //"Home" button released
     @FXML
     private void homeRelease(MouseEvent me) {
         //change appearance of button
-        btn_home_Map.setTextFill(Color.rgb(151,37,43));
-        btn_home_Map.setStyle("-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px;");
+        btn_map_home.setTextFill(Color.rgb(151,37,43));
+        btn_map_home.setStyle("-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px;");
         //change scene to Home
         Main.goto_scn_home();
     }
@@ -72,7 +73,7 @@ public class Map_Controller implements Initializable{
             //change image
             display_image = new Image(getClass().getResource("images/CalvinMapAcademic.jpg").toString());
             //change position
-            scaler.setValue(1.5);
+            zoom.setValue(1.5);
             mapImage.setFitWidth(1000*1.5);
             mapImage.setFitHeight(636*1.5);
             sp.setVvalue(.6);
@@ -81,7 +82,7 @@ public class Map_Controller implements Initializable{
             //change image
             display_image = new Image(getClass().getResource("images/CalvinMapResidence.jpg").toString());
             //change position
-            scaler.setValue(1.5);
+            zoom.setValue(1.5);
             mapImage.setFitWidth(1000*1.5);
             mapImage.setFitHeight(636*1.5);
             sp.setVvalue(.4);
@@ -90,7 +91,7 @@ public class Map_Controller implements Initializable{
             //change image
             display_image = new Image(getClass().getResource("images/CalvinMapKE.jpg").toString());
             //change position
-            scaler.setValue(2);
+            zoom.setValue(2);
             mapImage.setFitWidth(1000*2);
             mapImage.setFitHeight(636*2);
             sp.setVvalue(1);
@@ -99,7 +100,7 @@ public class Map_Controller implements Initializable{
             //change image
             display_image = new Image(getClass().getResource("images/CalvinMapAthletics.jpg").toString());
             //change position
-            scaler.setValue(1.5);
+            zoom.setValue(1.5);
             mapImage.setFitWidth(1000*1.5);
             mapImage.setFitHeight(636*1.5);
             sp.setVvalue(.2);
@@ -108,7 +109,7 @@ public class Map_Controller implements Initializable{
             //full image
             display_image = new Image(getClass().getResource("images/CalvinMapFull.jpg").toString());
             //full position
-            scaler.setValue(1);
+            zoom.setValue(1);
             mapImage.setFitWidth(1000);
             mapImage.setFitHeight(636);
             sp.setVvalue(0);
@@ -119,13 +120,16 @@ public class Map_Controller implements Initializable{
 
     @FXML
     private void changeScale(MouseEvent me) {
-        scale = scaler.getValue();
+        //get scale from slider
+        scale = zoom.getValue();
+        //zoom in on map image
         mapImage.setFitWidth(1000*scale);
         mapImage.setFitHeight(636*scale);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        //initialize map image
         display_image = new Image(getClass().getResource("images/CalvinMapFull.jpg").toString());
         mapImage.setImage(display_image);
     }

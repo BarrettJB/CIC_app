@@ -76,7 +76,7 @@
          <bottom>
             <AnchorPane prefHeight="100.0" prefWidth="1024.0" style="-fx-background-color: #71B1C8;" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="btn_home_Meal" mnemonicParsing="false" onMousePressed="#homePress" onMouseReleased="#homeRelease" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 6px; -fx-background-insets: 0;" text="Home" textFill="#97252b" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="15.0">
+                  <Button fx:id="btn_meal_home" mnemonicParsing="false" onMousePressed="#homePress" onMouseReleased="#homeRelease" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 6px; -fx-background-insets: 0;" text="Home" textFill="#97252b" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="15.0">
                      <font>
                         <Font name="Segoe UI Bold" size="30.0" />
                      </font>

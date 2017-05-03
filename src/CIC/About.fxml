@@ -29,6 +29,11 @@
    <center>
       <AnchorPane prefHeight="518.0" prefWidth="824.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
          <children>
+            <Label layoutX="39.0" layoutY="32.0" prefHeight="37.0" prefWidth="214.0" text="Project Summary:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="24.0" />
+               </font>
+            </Label>
             <Label layoutX="19.0" layoutY="50.0" prefHeight="122.0" prefWidth="495.0" text="This kiosk was created by Barrett Bryson, Emily Floch, and Landon Sterk as part of their Engineering Senior Design Project 2016-2017. For more information please visit our team website at http://engr.calvinblogs.org/16-17/srdesign13/ or use the QR code." wrapText="true" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="75.0">
                <font>
                   <Font name="Segoe UI" size="18.0" />
@@ -39,27 +44,7 @@
                   <Font name="Segoe UI Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="208.0" layoutY="482.0" text="© 2017, Calvin College and Barrett Bryson, Emily Floch, Landon Sterk">
-               <font>
-                  <Font name="Segoe UI" size="14.0" />
-               </font>
-            </Label>
             <Label layoutX="35.0" layoutY="204.0" text="Prof. Mark Michmerhuizen, Faculty Advisor" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="250.0">
-               <font>
-                  <Font name="Segoe UI" size="18.0" />
-               </font>
-            </Label>
-            <Label layoutX="59.0" layoutY="322.0" text="Calvin College Music Deparment" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="370.0">
-               <font>
-                  <Font name="Segoe UI" size="18.0" />
-               </font>
-            </Label>
-            <Label layoutX="80.0" layoutY="296.0" text="Kevin Van Schepen, Adam Vedra, Erin Bushhouse, Calvin Information Technology" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="340.0">
-               <font>
-                  <Font name="Segoe UI" size="18.0" />
-               </font>
-            </Label>
-            <Label layoutX="48.0" layoutY="270.0" text="Matt Jeltema, Director of Information Systems, Calvin Information Technology" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="310.0">
                <font>
                   <Font name="Segoe UI" size="18.0" />
                </font>
@@ -69,9 +54,24 @@
                   <Font name="Segoe UI" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="39.0" layoutY="32.0" prefHeight="37.0" prefWidth="214.0" text="Project Summary:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
+            <Label layoutX="48.0" layoutY="270.0" text="Matt Jeltema, Director of Information Systems, Calvin Information Technology" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="310.0">
                <font>
-                  <Font name="Segoe UI Bold" size="24.0" />
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="296.0" text="Kevin Van Schepen, Adam Vedra, Erin Bushhouse, Calvin Information Technology" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="340.0">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="59.0" layoutY="322.0" text="Calvin College Music Deparment" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="370.0">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="208.0" layoutY="482.0" text="© 2017, Calvin College and Barrett Bryson, Emily Floch, Landon Sterk">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
                </font>
             </Label>
             <ImageView fitHeight="191.0" fitWidth="227.0" layoutX="596.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
@@ -87,7 +87,7 @@
    <bottom>
       <AnchorPane prefHeight="100.0" prefWidth="1024.0" style="-fx-background-color: #71B1C8;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btn_home_About" layoutX="850.0" layoutY="38.0" mnemonicParsing="false" onMousePressed="#homePress" onMouseReleased="#homeRelease" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 6px; -fx-background-insets: 0;" text="Home" textFill="#97252b" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="15.0">
+            <Button fx:id="btn_about_home" layoutX="850.0" layoutY="38.0" mnemonicParsing="false" onMousePressed="#homePress" onMouseReleased="#homeRelease" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #ffffff; -fx-border-color: #97252B; -fx-border-width: 6px; -fx-background-insets: 0;" text="Home" textFill="#97252b" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="15.0">
                <font>
                   <Font name="Segoe UI Bold" size="30.0" />
                </font>

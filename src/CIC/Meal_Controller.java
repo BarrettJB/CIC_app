@@ -27,10 +27,11 @@ import java.time.Duration;
  * Created by bb36 on 2/13/2017.
  */
 public class Meal_Controller {
+    //this class parses and displays meal information after the student id card is swiped
     @FXML
     public Label text_meals, text_bonus, text_name, text_uid, text_update;
     @FXML
-    private Button btn_home_Meal;
+    private Button btn_meal_home;
     String user_info;
     String str_meals, str_bonus, str_name, str_update, str_maxmeals, str_weekly, str_uid, str_name_temp;
     String[] array_name;
@@ -39,35 +40,27 @@ public class Meal_Controller {
     @FXML
     private void homePress(MouseEvent me) {
         //change appearance of button
-        btn_home_Meal.setTextFill(Color.rgb(255,255,255));
-        btn_home_Meal.setStyle("-fx-background-color: #97252b; -fx-border-color: #97252b; -fx-border-width: 6px;");
+        btn_meal_home.setTextFill(Color.rgb(255,255,255));
+        btn_meal_home.setStyle("-fx-background-color: #97252b; -fx-border-color: #97252b; -fx-border-width: 6px;");
     }
     //"Home" button released
     @FXML
     private void homeRelease(MouseEvent me) throws IOException {
         //change appearance of button
-        btn_home_Meal.setTextFill(Color.rgb(151,37,43));
-        btn_home_Meal.setStyle("-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px;");
+        btn_meal_home.setTextFill(Color.rgb(151,37,43));
+        btn_meal_home.setStyle("-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px;");
         //reset scene to PIN
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
         Parent root = loader.load();
-        btn_home_Meal.getScene().setRoot(root);
+        btn_meal_home.getScene().setRoot(root);
+        //btn_meal_home.getScene().setRoot(Main.par_Home);
         //change scene to Home
         Main.goto_scn_home();
     }
 
-//    public boolean ValidId() {
-//        String testID = APIController.getUser(Home_Controller.studentid, true);
-//        if (testID.equals("error")) {
-//            return false;
-//        } else {
-//            return true;
-//        }
-//    }
-
     //gets info about who just logged in and displays appropriately
     public boolean setLabelTexts() {
-        //if valid number, set labels and return true
+        //if valid id number, set labels and return true
         //if not, return false
         user_info = APIController.getUser(Home_Controller.studentid, true);
         if (user_info.equals("error")) {

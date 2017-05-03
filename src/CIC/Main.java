@@ -12,7 +12,8 @@ import javafx.stage.WindowEvent;
 public class Main extends Application {
     //initialize stage and scenes
     static Stage stg_Main;
-    static Scene scn_PIN, scn_Home, scn_Meal, scn_Map, scn_Lost, scn_About;
+    static Scene scn_PIN, scn_Home, scn_Meal, scn_Map, scn_Plan, scn_About;
+    //static Parent par_Home;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -27,8 +28,8 @@ public class Main extends Application {
         scn_Meal = new Scene(par_Meal, 1024, 768);
         Parent par_Map = FXMLLoader.load(getClass().getResource("Map.fxml"));
         scn_Map = new Scene(par_Map, 1024,768);
-        Parent par_Lost = FXMLLoader.load(getClass().getResource("Lost.fxml"));
-        scn_Lost = new Scene(par_Lost, 1024, 768);
+        Parent par_Plan = FXMLLoader.load(getClass().getResource("MealPlan.fxml"));
+        scn_Plan = new Scene(par_Plan, 1024, 768);
         Parent par_About = FXMLLoader.load(getClass().getResource("About.fxml"));
         scn_About = new Scene(par_About, 1024, 768);
 
@@ -41,6 +42,7 @@ public class Main extends Application {
     }
 
     //functions used to move between scenes
+    //also start/stop checking the card reader for new data as appropriate
     public static void goto_scn_home() {
         Home_Controller.checkCardReader.setCycleCount(Timeline.INDEFINITE);
         Home_Controller.checkCardReader.play();
@@ -58,9 +60,9 @@ public class Main extends Application {
         Home_Controller.checkCardReader.pause();
         stg_Main.setScene(scn_Map);
     }
-    public static void goto_scn_Lost() {
+    public static void goto_scn_Plan() {
         Home_Controller.checkCardReader.pause();
-        stg_Main.setScene(scn_Lost);
+        stg_Main.setScene(scn_Plan);
     }
     public static void goto_scn_About() {
         Home_Controller.checkCardReader.pause();
