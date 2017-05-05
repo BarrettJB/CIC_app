@@ -34,7 +34,7 @@
                   <Font name="Segoe UI Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="19.0" layoutY="50.0" prefHeight="122.0" prefWidth="495.0" text="This kiosk was created by Barrett Bryson, Emily Floch, and Landon Sterk as part of their Engineering Senior Design Project 2016-2017. For more information please visit our team website at http://engr.calvinblogs.org/16-17/srdesign13/ or use the QR code." wrapText="true" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="75.0">
+            <Label alignment="TOP_LEFT" layoutX="19.0" layoutY="50.0" prefHeight="130.0" prefWidth="513.0" text="This kiosk was created by Barrett Bryson, Emily Floch, and Landon Sterk as part of their Engineering Senior Design Project 2016-2017. For more information please visit our team website using the QR code." wrapText="true" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="75.0">
                <font>
                   <Font name="Segoe UI" size="18.0" />
                </font>
@@ -59,7 +59,7 @@
                   <Font name="Segoe UI" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="80.0" layoutY="296.0" text="Kevin Van Schepen, Adam Vedra, Erin Bushhouse, Calvin Information Technology" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="340.0">
+            <Label layoutX="80.0" layoutY="296.0" text="Kevin Van Schepen, Adam Vedra, Erin Bushouse, Calvin Information Technology" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="340.0">
                <font>
                   <Font name="Segoe UI" size="18.0" />
                </font>
