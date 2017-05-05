@@ -43,7 +43,7 @@
                   <Font name="Segoe UI" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="text_inst12" alignment="TOP_LEFT" layoutX="231.0" layoutY="392.0" prefHeight="35.0" prefWidth="201.0" text="6-7 meals/week" wrapText="true" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="394.0">
+            <Label fx:id="text_inst12" alignment="TOP_LEFT" layoutX="231.0" layoutY="392.0" prefHeight="35.0" prefWidth="270.0" text="6-7 meals/week" wrapText="true" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="394.0">
                <font>
                   <Font name="Segoe UI" size="26.0" />
                </font>
@@ -53,7 +53,7 @@
                   <Font name="Segoe UI" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="text_inst14" alignment="TOP_LEFT" layoutX="225.0" layoutY="344.0" prefHeight="35.0" prefWidth="180.0" text="4 meals/week" wrapText="true" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="342.0">
+            <Label fx:id="text_inst14" alignment="TOP_LEFT" layoutX="225.0" layoutY="344.0" prefHeight="35.0" prefWidth="228.0" text="4 meals/week" wrapText="true" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="342.0">
                <font>
                   <Font name="Segoe UI" size="26.0" />
                </font>
@@ -68,37 +68,37 @@
                   <Font name="Segoe UI" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="text_inst17" alignment="TOP_LEFT" layoutX="37.0" layoutY="439.0" prefHeight="35.0" prefWidth="136.0" text="150 Block" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="446.0">
+            <Label fx:id="text_inst17" alignment="TOP_LEFT" layoutX="37.0" layoutY="439.0" prefHeight="35.0" prefWidth="177.0" text="150 Block" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="446.0">
                <font>
                   <Font name="Segoe UI" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="text_inst18" alignment="TOP_LEFT" layoutX="30.0" layoutY="394.0" prefHeight="35.0" prefWidth="141.0" text="100 Block" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="394.0">
+            <Label fx:id="text_inst18" alignment="TOP_LEFT" layoutX="30.0" layoutY="394.0" prefHeight="35.0" prefWidth="184.0" text="100 Block" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="394.0">
                <font>
                   <Font name="Segoe UI" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="text_inst19" alignment="TOP_LEFT" layoutX="64.0" layoutY="313.0" prefHeight="35.0" prefWidth="121.0" text="60 Block" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="342.0">
+            <Label fx:id="text_inst19" alignment="TOP_LEFT" layoutX="64.0" layoutY="313.0" prefHeight="35.0" prefWidth="175.0" text="60 Block" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="342.0">
                <font>
                   <Font name="Segoe UI" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="text_inst110" alignment="TOP_LEFT" layoutX="48.0" layoutY="274.0" prefHeight="35.0" prefWidth="123.0" text="30 Block" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="290.0">
+            <Label fx:id="text_inst110" alignment="TOP_LEFT" layoutX="48.0" layoutY="274.0" prefHeight="35.0" prefWidth="179.0" text="30 Block" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="290.0">
                <font>
                   <Font name="Segoe UI" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="text_inst111" alignment="TOP_LEFT" layoutX="79.0" layoutY="176.0" prefHeight="35.0" prefWidth="176.0" text="10 Meal Plan" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="186.0">
+            <Label fx:id="text_inst111" alignment="TOP_LEFT" layoutX="79.0" layoutY="176.0" prefHeight="35.0" prefWidth="198.0" text="10 Meal Plan" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="186.0">
                <font>
                   <Font name="Segoe UI" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="text_inst112" alignment="TOP_LEFT" layoutX="91.0" layoutY="134.0" prefHeight="35.0" prefWidth="175.0" text="15 Meal Plan" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="134.0">
+            <Label fx:id="text_inst112" alignment="TOP_LEFT" layoutX="91.0" layoutY="134.0" prefHeight="35.0" prefWidth="193.0" text="15 Meal Plan" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="134.0">
                <font>
                   <Font name="Segoe UI" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="text_inst113" alignment="TOP_LEFT" layoutX="69.0" layoutY="93.0" prefHeight="35.0" prefWidth="161.0" text="21 Meal Plan" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="82.0">
+            <Label fx:id="text_inst113" alignment="TOP_LEFT" layoutX="69.0" layoutY="93.0" prefHeight="35.0" prefWidth="199.0" text="21 Meal Plan" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="82.0">
                <font>
                   <Font name="Segoe UI" size="26.0" />
                </font>
@@ -118,7 +118,7 @@
                   <Font name="Segoe UI" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="text_inst124" alignment="TOP_LEFT" layoutX="322.0" layoutY="134.0" prefHeight="35.0" prefWidth="201.0" text="15 meals/week" wrapText="true" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="134.0">
+            <Label fx:id="text_inst124" alignment="TOP_LEFT" layoutX="322.0" layoutY="134.0" prefHeight="35.0" prefWidth="237.0" text="15 meals/week" wrapText="true" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="134.0">
                <font>
                   <Font name="Segoe UI" size="26.0" />
                </font>
@@ -128,7 +128,7 @@
                   <Font name="Segoe UI" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="text_inst126" alignment="TOP_LEFT" layoutX="304.0" layoutY="91.0" prefHeight="35.0" prefWidth="201.0" text="21 meals/week" wrapText="true" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="82.0">
+            <Label fx:id="text_inst126" alignment="TOP_LEFT" layoutX="304.0" layoutY="91.0" prefHeight="35.0" prefWidth="252.0" text="21 meals/week" wrapText="true" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="82.0">
                <font>
                   <Font name="Segoe UI" size="26.0" />
                </font>
@@ -138,7 +138,7 @@
                   <Font name="Segoe UI" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="text_inst128" alignment="TOP_LEFT" layoutX="228.0" layoutY="447.0" prefHeight="35.0" prefWidth="201.0" text="10 meals/week" wrapText="true" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="446.0">
+            <Label fx:id="text_inst128" alignment="TOP_LEFT" layoutX="228.0" layoutY="447.0" prefHeight="35.0" prefWidth="233.0" text="10 meals/week" wrapText="true" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="446.0">
                <font>
                   <Font name="Segoe UI" size="26.0" />
                </font>

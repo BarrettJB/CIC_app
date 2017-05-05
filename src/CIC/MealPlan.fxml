@@ -43,7 +43,7 @@
                   <Font name="Segoe UI" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="text_inst12" alignment="TOP_LEFT" layoutX="231.0" layoutY="392.0" prefHeight="35.0" prefWidth="245.0" text="6-7 meals/week" wrapText="true" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="394.0">
+            <Label fx:id="text_inst12" alignment="TOP_LEFT" layoutX="231.0" layoutY="392.0" prefHeight="35.0" prefWidth="270.0" text="6-7 meals/week" wrapText="true" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="394.0">
                <font>
                   <Font name="Segoe UI" size="26.0" />
                </font>
@@ -98,7 +98,7 @@
                   <Font name="Segoe UI" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="text_inst113" alignment="TOP_LEFT" layoutX="69.0" layoutY="93.0" prefHeight="35.0" prefWidth="186.0" text="21 Meal Plan" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="82.0">
+            <Label fx:id="text_inst113" alignment="TOP_LEFT" layoutX="69.0" layoutY="93.0" prefHeight="35.0" prefWidth="199.0" text="21 Meal Plan" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="82.0">
                <font>
                   <Font name="Segoe UI" size="26.0" />
                </font>
