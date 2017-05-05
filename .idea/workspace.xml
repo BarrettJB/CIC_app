@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="307f5cde-d151-4d8e-801f-7d5d9d690f8b" name="Default" comment="Fixed NPE in URL Encoder">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CIC_app/CIC/Main.class" afterPath="$PROJECT_DIR$/out/production/CIC_app/CIC/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CIC_app/CIC/Meal_Controller.class" afterPath="$PROJECT_DIR$/out/production/CIC_app/CIC/Meal_Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CIC_app/CIC/About.fxml" afterPath="$PROJECT_DIR$/out/production/CIC_app/CIC/About.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CIC_app/CIC/Home.fxml" afterPath="$PROJECT_DIR$/out/production/CIC_app/CIC/Home.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CIC_app/CIC/Map.fxml" afterPath="$PROJECT_DIR$/out/production/CIC_app/CIC/Map.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CIC_app/CIC/MealPlan.fxml" afterPath="$PROJECT_DIR$/out/production/CIC_app/CIC/MealPlan.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CIC/About.fxml" afterPath="$PROJECT_DIR$/src/CIC/About.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CIC/MealPlan.fxml" afterPath="$PROJECT_DIR$/src/CIC/MealPlan.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CIC/Map_Controller.java" afterPath="$PROJECT_DIR$/src/CIC/Map_Controller.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -116,8 +108,8 @@
       <file leaf-file-name="Map_Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CIC/Map_Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="106" column="29" lean-forward="true" selection-start-line="106" selection-start-column="29" selection-end-line="106" selection-end-column="29" />
+            <state relative-caret-position="204">
+              <caret line="49" column="41" lean-forward="true" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -199,7 +191,6 @@
         <option value="$PROJECT_DIR$/src/CIC/Login.java" />
         <option value="$PROJECT_DIR$/src/CIC/About.fxml" />
         <option value="$PROJECT_DIR$/src/CIC/Home.fxml" />
-        <option value="$PROJECT_DIR$/src/CIC/Map_Controller.java" />
         <option value="$PROJECT_DIR$/src/CIC/Meal.fxml" />
         <option value="$PROJECT_DIR$/src/CIC/MealPlan_Controller.java" />
         <option value="$PROJECT_DIR$/src/CIC/MealPlan.fxml" />
@@ -212,6 +203,7 @@
         <option value="$PROJECT_DIR$/src/CIC/Meal_Controller.java" />
         <option value="$PROJECT_DIR$/src/CIC/Main.java" />
         <option value="$PROJECT_DIR$/src/CIC/Map.fxml" />
+        <option value="$PROJECT_DIR$/src/CIC/Map_Controller.java" />
       </list>
     </option>
   </component>
@@ -1068,8 +1060,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CIC/Map_Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="106" column="29" lean-forward="true" selection-start-line="106" selection-start-column="29" selection-end-line="106" selection-end-column="29" />
+        <state relative-caret-position="204">
+          <caret line="49" column="41" lean-forward="true" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
           <folding />
         </state>
       </provider>

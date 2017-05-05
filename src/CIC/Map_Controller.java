@@ -46,6 +46,8 @@ public class Map_Controller implements Initializable{
         //change appearance of button
         btn_map_home.setTextFill(Color.rgb(151,37,43));
         btn_map_home.setStyle("-fx-background-color: #ffffff; -fx-border-color: #97252b; -fx-border-width: 6px;");
+        display_image = new Image(getClass().getResource("images/CalvinMapFull.jpg").toString());
+        mapImage.setImage(display_image);
         //change scene to Home
         Main.goto_scn_home();
     }
